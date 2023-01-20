@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CO2 Equilibrium Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" user-scalable="no">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#202b38">
+  <meta name="msapplication-TileColor" content="#202b38">
+  <meta name="theme-color" content="#202b38">
+  <script src="papaparse.min.js"></script>
+  <script src="awesomplete.min.js"></script>
+  <link rel="stylesheet" href="dark.css">
+  <link rel="stylesheet" href="custom.css">
+</head>
+
+<body>
+  <img src="AS_Logo.png" width="100%">
+  <h2>CO2 Equilibrium Calculator</h2>
+  <form id="calcForm">
+    <label for="tempInput">Ambient Temperature of Cellar:</label>
+    <div class="error" id="tempError" style="color:#ffbe85"></div>
+    <br>
+    <input type="text" inputmode="decimal" id="tempInput" placeholder="Enter the cellar temp in Celsius">
+    <br>
+    <label for="volInput">Product CO2 Volume:</label>
+    <div class="error" id="volError" style="color:#ffbe85"></div>
+    <br>
+    <input type="text" inputmode="text" id="volInput" placeholder="Search by product name or enter value">
+    <br>
+    <label for="pctInput">Percentage CO2 Used:</label>
+    <div class="error" id="pctError" style="color:#ffbe85"></div>
+    <br>
+    <input type="text" inputmode="decimal" id="pctInput" placeholder="e.g. for 60/40 enter 60"">
+    <br><br>
+    <button type="submit">Calculate</button><h3 id="displayPsi"></h3>
+  </form>
+  <br><br>
+  <div id="loading-state" style="color:#ffbe85"></div>
+  <script src="autocomplete.js"></script>
+  <script src="form-validation.js"></script>
+  <script src="calculations.js"></script>
+  <script src="form-event-listener.js"></script>
+</body>
+
+</html>
